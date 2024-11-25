@@ -120,4 +120,39 @@ public class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void setNumberWave() {
+        Radio radio = new Radio(121);
+
+        Assertions.assertEquals(121, radio.getNumberWave());
+        Assertions.assertEquals(0, radio.getCurrentWave());
+    }
+
+    @Test
+    public void setPrevMinNumberWave() {
+        Radio radio = new Radio(65);
+
+        radio.setCurrentWave(0);
+        radio.decreaseWave();
+
+        int expected = 64;
+        int actual = radio.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void setNextMaxNumberWave() {
+        Radio radio = new Radio(72);
+
+        radio.setCurrentWave(71);
+        radio.increaseWave();
+
+        int expected = 0;
+        int actual = radio.getCurrentWave();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }
