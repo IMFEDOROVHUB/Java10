@@ -17,7 +17,7 @@ public class Radio {
     }
 
     public Radio() {
-this.numberWave = 10;
+        this.numberWave = 10;
     }
 
     public int getCurrentWave() {
@@ -47,7 +47,7 @@ this.numberWave = 10;
     }
 
     public void increaseWave() {
-        if (currentWave < numberWave  - 1) {
+        if (currentWave < numberWave - 1) {
             setCurrentWave(currentWave + 1);
         } else {
             currentWave = 0;
@@ -58,7 +58,7 @@ this.numberWave = 10;
         if (currentWave > 0) {
             currentWave = currentWave - 1;
         } else {
-            setCurrentWave(numberWave  - 1);
+            setCurrentWave(numberWave - 1);
         }
     }
 }
